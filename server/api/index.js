@@ -21,6 +21,10 @@ mongoose.connect("mongodb+srv://202001431:VzLAm7HxAtMuPCWv@newsbits.gtau81v.mong
   useUnifiedTopology: true,
 });
 
+app.get("/api/" , (req, res) => {
+    res.json({Message: "Hello"});
+});
+
 app.post("/api/register", async (req, res) => {
   console.log(req.body);
   try {
