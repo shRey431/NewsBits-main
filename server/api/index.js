@@ -119,4 +119,3 @@ app.get("/api/news", (req, res) => {
 
 app.listen(PORT, () => console.log("Server running on port " + PORT));
 
-modules.exports = app;
