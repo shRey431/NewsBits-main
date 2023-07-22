@@ -4,6 +4,6 @@
       { "src": "*.js", "use": "@vercel/node" }
    ],
    "redirects": [
-      { "src": "/(.*)", "dest": "/index.js" }
+      { "src": "/(.*)", "dest": "/api" }
    ]
 }
