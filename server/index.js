@@ -12,7 +12,7 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 1337;
 
-mongoose.connect("mongodb://localhost:27017/newsbits", {
+mongoose.connect("mongodb+srv://202001431:VzLAm7HxAtMuPCWv@newsbits.gtau81v.mongodb.net/?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -93,7 +93,7 @@ app.get("/api/home", async (req, res) => {
 
 app.get("/api/news", async (req, res) => {
   try {
-    const news = await News.find();
+    const news = await News.find().sort({publishDate : -1});
     res.json(news);
   } catch (error) {
     console.error(error);
@@ -104,7 +104,7 @@ app.get("/api/news", async (req, res) => {
 app.get("/api/news", (req, res) => {
   const category = req.query.category;
 
-  News.find({ Category: category })
+  News.find({ category: category }).sort({publishDate : -1})
     .then((news) => {
       res.json(news);
     })

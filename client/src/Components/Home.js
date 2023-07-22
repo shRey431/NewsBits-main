@@ -69,7 +69,7 @@ function Home() {
 
   const filterNews = (newsCategory) => {
     const updatedNews = news.filter((curElem) => {
-      return curElem.Category === newsCategory;
+      return curElem.category === newsCategory;
     });
     setFilteredNews(updatedNews);
   };
@@ -205,30 +205,30 @@ function Home() {
                 <div className="col p-4 d-flex flex-column position-static">
                   <strong
                     className={`d-inline-block mb-2 text-${
-                      item.Category === "TECHNOLOGY"
+                      item.category === "TECHNOLOGY"
                         ? "primary"
-                        : item.Category === "NATION"
+                        : item.category === "NATION"
                         ? "success"
-                        : item.Category === "BUSINESS"
+                        : item.category === "BUSINESS"
                         ? "danger"
-                        : item.Category === "WORLD"
+                        : item.category === "WORLD"
                         ? "secondary"
-                        : item.Category === "ENTERTAINMENT"
+                        : item.category === "ENTERTAINMENT"
                         ? "warning"
-                        : item.Category === "HEALTH"
+                        : item.category === "HEALTH"
                         ? "info"
                         : "dark"
                     }`}
                   >
-                    {item.Category}
+                    {item.category}
                   </strong>
-                  <h3 className="mb-0 news-title">{item.Title}</h3>
+                  <h3 className="mb-0 news-title">{item.title}</h3>
                   <div className="mb-1 news-date text-muted">
-                    {item.Published_Date}
+                    {item.publishDate}
                   </div>
-                  <p className="news-description mb-auto">{item.Description}</p>
+                  <p className="news-description mb-auto">{item.description}</p>
                   <a
-                    href={item.Link}
+                    href={item.link}
                     className="stretched-link"
                     target="_blank"
                     rel="noreferrer"
@@ -241,7 +241,7 @@ function Home() {
                     className="bd-placeholder-img rounded"
                     width="200"
                     height="150"
-                    src={item.Image}
+                    src={item.image}
                     alt="Thumbnail"
                   />
                 </div>
