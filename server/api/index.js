@@ -21,7 +21,7 @@ mongoose.connect("mongodb+srv://202001431:VzLAm7HxAtMuPCWv@newsbits.gtau81v.mong
   useUnifiedTopology: true,
 });
 
-app.get("/api/" , (req, res) => {
+app.get("/api" , (req, res) => {
     res.json({Message: "Hello"});
 });
 
