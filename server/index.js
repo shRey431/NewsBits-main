@@ -8,7 +8,7 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 
 app.use(cors({
-  origin: ["https://news-bits-main-web.vercel.app/"],
+  origin: ["https://news-bits-main-web.vercel.app"],
   methods: ["POST", "GET"],
   credential: true
 }));
