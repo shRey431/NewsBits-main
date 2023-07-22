@@ -25,7 +25,7 @@ function Home() {
   });
 
   async function populateLogin() {
-    const req = await fetch("http://localhost:1337/api/home", {
+    const req = await fetch("https://news-bits-api.vercel.app/api/home", {
       headers: {
         "x-access-token": localStorage.getItem("token"),
       },
@@ -50,7 +50,7 @@ function Home() {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await fetch("http://localhost:1337/api/news");
+        const response = await fetch("https://news-bits-api.vercel.app/api/news");
         const data = await response.json();
         setNews(data);
         setFilteredNews(data);

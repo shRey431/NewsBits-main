@@ -15,7 +15,7 @@ function Login() {
     event.preventDefault();
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:1337/api/login", {
+      const response = await fetch("https://news-bits-api.vercel.app/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

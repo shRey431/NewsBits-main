@@ -7,7 +7,11 @@ const News = require("./models/news.model");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 
-app.use(cors());
+app.use(cors({
+  origin: ["https://news-bits-main-web.vercel.app/"],
+  methods: ["POST", "GET"],
+  credential: true
+}));
 app.use(express.json());
 
 const PORT = process.env.PORT || 1337;
