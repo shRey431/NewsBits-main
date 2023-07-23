@@ -12,7 +12,7 @@ function Signup() {
 
   async function registerUser(event) {
     event.preventDefault();
-    const response = await fetch("https://news-bits-api.vercel.app/api/register", {
+    const response = await fetch("https://newsbits-api.onrender.com/api/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

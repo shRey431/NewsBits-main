@@ -15,7 +15,7 @@ function Login() {
     event.preventDefault();
     try {
       setLoading(true);
-      const response = await fetch("https://news-bits-api.vercel.app/api/login", {
+      const response = await fetch("https://newsbits-api.onrender.com/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
