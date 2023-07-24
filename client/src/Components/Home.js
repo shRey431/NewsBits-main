@@ -94,7 +94,7 @@ function Home() {
               </a>
             </div>
             <div className="col-4 d-flex justify-content-end align-items-center">
-              {token ? (
+              {/* {token ? (
                 <Link to="/">
                   <span
                     onClick={clearToken}
@@ -109,7 +109,7 @@ function Home() {
                     Login
                   </span>
                 </Link>
-              )}
+              )} */}
             </div>
           </div>
         </header>
