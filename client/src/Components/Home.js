@@ -224,7 +224,7 @@ function Home() {
                   </strong>
                   <h3 className="mb-0 news-title">{item.title}</h3>
                   <div className="mb-1 news-date text-muted">
-                    {item.publishDate}
+                    {item.cardDate}
                   </div>
                   <p className="news-description mb-auto">{item.description}</p>
                   <a

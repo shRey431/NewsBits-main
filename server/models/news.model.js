@@ -9,6 +9,7 @@ const News = new mongoose.Schema(
         title: { type: String, }
     },
     publishDate: { type: Date },
+    cardDate: {type: String },
     description: { type: String },
     image: { type: String },
     link: { type: String },
